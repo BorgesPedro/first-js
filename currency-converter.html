@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Typing Converter</title>
+</head>
+<body>
+    <main>
+        <p>Digite um valor em real em seguida selecione uma opção abaixo para ver como fica</p>
+        <input type="number" name="money-amount" id="money-amount" />
+        <p>Converter a escrita do REAL(BRL) para: </p>
+        <button type="button" onClick="dollarConverter()">DOLLAR(USD)</button>
+        <button type="button" onClick="eurConverter()">EURO(EUR)</button>
+        <button type="button" onClick="chfConverter()">Schweizerfranken(CHF)</button>
+
+        <span id="result" style="color:red"></span>
+    </main>
+
+
+    <script>
+
+        function dollarConverter(){
+            var amount = Number(document.getElementById('money-amount').value)
+            var result = document.getElementById('result')
+            result.innerText = amount.toLocaleString('en-us', {style: 'currency', currency: 'USD'})
+        }
+        function eurConverter(){
+            var amount = Number(document.getElementById('money-amount').value)
+            var result = document.getElementById('result')
+            result.innerText = amount.toLocaleString('en-us', {style: 'currency', currency: 'EUR'})
+        }
+        function chfConverter(){
+            var amount = Number(document.getElementById('money-amount').value)
+            var result = document.getElementById('result')
+            result.innerText = amount.toLocaleString('de-ch', {style: 'currency', currency: 'CHF'})
+        }
+
+
+
+    </script>
+</body>
+</html>
