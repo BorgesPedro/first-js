@@ -11,5 +11,7 @@ function deltaCalc() {
 
 function calcularBhaskara() {
     let resultadoBhaskara = (-b + Math.sqrt(deltaCalc())) / (2*a)
-    console.log(resultadoBhaskara)
+    let resultadoBhaskara2 = (-b - Math.sqrt(deltaCalc())) / (2*a)
+    result.innerText += ` O valor de x' é ${resultadoBhaskara.toFixed(4)}`
+    result.innerText += ` O valor de x'' é ${resultadoBhaskara2.toFixed(4)}`
 }
